@@ -16,9 +16,7 @@ stages{
         stage('Build'){
             
             steps {
-                 env.JAVA_HOME="${tool 'java 1.8'}"
-    env.PATH="${env.JAVA_HOME}/bin:${env.PATH}"
-                sh 'mvn clean package'
+                    sh 'mvn clean package'
             }
             post {
                 success {
